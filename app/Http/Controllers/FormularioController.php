@@ -75,7 +75,7 @@ class FormularioController extends Controller
 
        
 
-        Mail::to($data['email'])->cc('info@tuempresa.com')->send(new ConfirmacionFormulario($data));
+        Mail::to($data['email'])->cc('lelobo75@gmail.com')->send(new ConfirmacionFormulario($data));
 
         
         return view('merci', ['data' => $data])->with('success', 'Formulario enviado correctamente.');
