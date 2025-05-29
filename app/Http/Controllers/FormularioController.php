@@ -48,10 +48,14 @@ class FormularioController extends Controller
         $total += ($data['combo_frites'] ?? 0) * 3.5;
         $total += ($data['combo_mix'] ?? 0) * 9;
         $total += ($data['combo_mix_veg'] ?? 0) * 10;
+        $total += ($data['combo_mix_frites_boison_sauce'] ?? 0) * 11;
+        $total += ($data['combo_mix_frites_veg_boison_sauce'] ?? 0) * 12;
+        $total += ($data['ticket'] ?? 0) * 10;
+       // Formatear el total a dos decimales con coma como separador decimal
 
         $data['total'] = $total;
 
-
+     
       
 
          RegistroFormulario::create([
